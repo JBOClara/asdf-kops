@@ -78,9 +78,6 @@ download_release() {
   echo "* Downloading ${TOOL_NAME} release ${version}..."
   curl "${curl_opts[@]}" -o "${filename}" -C - "${url}" || fail "Could not download ${url}"
   chmod +x "${filename}"
-  ls -lah "${filename}"
-  file "${filename}"
-  test -x "${filename}" || fail "Expected ${filename} to be executable."
 }
 
 install_version() {
