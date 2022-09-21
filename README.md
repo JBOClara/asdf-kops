@@ -19,7 +19,6 @@
 **TODO: adapt this section**
 
 - `bash`, `curl`, `tar`: generic POSIX utilities.
-- `ASDF_KOPS_OVERRIDE_VERSION`: set this environment variable in your shell config to load the correct version of tool x.
 - `ASDF_KOPS_OVERWRITE_ARCH`: set this environment variable in your shell config to load the correct version of tool x.
 
 # Install
