@@ -13,21 +13,20 @@ fail() {
 }
 
 detect_arch() {
+  OVERWRITE_ARCH=${ASDF_KOPS_OVERWRITE_ARCH:-"false"}
+
   machine=$(arch)
-  case "${machine}" in
-  x86_64)
-    echo "amd64"
-    ;;
-  aarch64)
+  if [[ ${OVERWRITE_ARCH} != "false" ]]; then
+    echo "${OVERWRITE_ARCH}"
+  elif [[ ${machine} == "arm64" ]] || [[ ${machine} == "aarch64" ]]; then
     echo "arm64"
-    ;;
-  i386)
+  elif [[ ${machine} == *"arm"* ]] || [[ ${machine} == *"aarch"* ]]; then
+    echo "arm"
+  elif [[ ${machine} == *"386"* ]]; then
+    echo "386"
+  else
     echo "amd64"
-    ;;
-  *)
-    echo "${machine}"
-    ;;
-  esac
+  fi
 }
 
 detect_os() {
