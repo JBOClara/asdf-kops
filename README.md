@@ -1,6 +1,6 @@
 <div align="center">
 
-# asdf-kops [![Build](https://github.com/kubernetes/asdf-kops/actions/workflows/build.yml/badge.svg)](https://github.com/kubernetes/asdf-kops/actions/workflows/build.yml) [![Lint](https://github.com/kubernetes/asdf-kops/actions/workflows/lint.yml/badge.svg)](https://github.com/kubernetes/asdf-kops/actions/workflows/lint.yml)
+# asdf-kops [![Build](https://github.com/JBOClara/asdf-kops/actions/workflows/build.yml/badge.svg)](https://github.com/JBOClara/asdf-kops/actions/workflows/build.yml) [![Lint](https://github.com/JBOClara/asdf-kops/actions/workflows/lint.yml/badge.svg)](https://github.com/JBOClara/asdf-kops/actions/workflows/lint.yml)
 
 
 [kops](https://kops.sigs.k8s.io) plugin for the [asdf version manager](https://asdf-vm.com).
@@ -54,7 +54,7 @@ install & manage versions.
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
-[Thanks goes to these contributors](https://github.com/kubernetes/asdf-kops/graphs/contributors)!
+[Thanks goes to these contributors](https://github.com/JBOClara/asdf-kops/graphs/contributors)!
 
 # License
 
