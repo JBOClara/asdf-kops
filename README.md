@@ -28,7 +28,7 @@ Plugin:
 ```shell
 asdf plugin add kops
 # or
-asdf plugin add kops https://github.com/kubernetes/asdf-kops.git
+asdf plugin add kops https://github.com/JBOClara/asdf-kops.git
 ```
 
 kops:
