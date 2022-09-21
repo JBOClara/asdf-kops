@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euox pipefail
+set -euo pipefail
 
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for kops.
 GH_REPO="https://github.com/kubernetes/kops"
