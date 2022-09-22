@@ -16,10 +16,8 @@
 
 # Dependencies
 
-**TODO: adapt this section**
-
 - `bash`, `curl`, `tar`: generic POSIX utilities.
-- `ASDF_KOPS_OVERWRITE_ARCH`: set this environment variable in your shell config to load the correct version of tool x.
+- `ASDF_KOPS_OVERWRITE_ARCH`: override architecture
 
 # Install
 
@@ -49,6 +47,22 @@ kops version
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
 install & manage versions.
+
+# Usage
+
+## direnv
+
+[direnv](https://direnv.net/) may allow you to automatically select the correct version for your cluster.
+
+You need to set `KOPS_STATE_STORE` and `CLUSTER_NAME`.
+
+```bash
+CLUSTER_PATH_UID=$(sha256sum<<<"${OLDPWD}")
+aws s3 cp "$KOPS_STATE_STORE/$CLUSTER_NAME/kops-version.txt" "/tmp/${CLUSTER_PATH_UID:0:13}-kops-version-${ENV}-${CLUSTER_NAME}.txt"
+KOPS_VERSION=$(cat /tmp/"${CLUSTER_PATH_UID:0:13}"-kops-version-"${ENV}"-"${CLUSTER_NAME}".txt)
+asdf install kops "$KOPS_VERSION"
+asdf local kops "$KOPS_VERSION"
+```
 
 # Contributing
 
